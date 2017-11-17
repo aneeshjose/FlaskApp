@@ -5,21 +5,11 @@
 </head>
 <body>
 
-<h2>{{u1}}</h2>
-{{t1}}
 
-<h2>{{u2}}</h2>
-{{t2}}
-
-<h2>{{u3}}</h2>
-{{t3}}
-
-<h2>{{u4}}</h2>
-{{t4}}
-
-<h2>{{u5}}</h2>
-{{t5}}
-
+{%for i in range(leng)%}
+<h3><a href='{{user[i]}}'>{{user[i]}}</a>
+<h4><i>{{thought[i]}}</i></h4>
+{%endfor%}
 
 </body>
 </html>

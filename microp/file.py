@@ -8,7 +8,7 @@ cur=con.cursor()
 
 app=Flask(__name__)
 
-@app.route('/post',methods=['GET','POST'])
+@app.route('/posts',methods=['GET','POST'])
 def post():
    if request.method=='POST':
       inp=request.form['thought']
