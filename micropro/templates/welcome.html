@@ -1,0 +1,45 @@
+<html>
+<head>
+<link rel='stylesheet' href='http://localhost/microp/styles/styles.css'>
+<title>Welcome </title>
+</head>
+<body>
+
+<center>
+<br>
+<br>
+<h2>Eter your thoughts</h2>
+<form method='post' action='/post'>
+<br>
+<input type='text' placeholder='Enter your thoughts' name='thoughts'>
+<br>
+<input type='submit' value='submit'>
+<br>
+<br>
+</form> 
+
+
+
+<br><br>
+{%for i in range(leng)%}
+<h3><a href='{{user[i]}}'>{{user[i]}}</a>
+<h4><i>{{thought[i]}}</i></h4>
+<small><h5>{{likes[i]}}LIKES,{{happy[i]}}Happy,{{loves[i]}}Loves,{{angry[i]}}Angry</h5></small>
+<br>
+<button class='like' id="{{user[i]}}" onClick="something()"><a href="/like/{{times[i]}}">LIKE</a></button>
+
+<button class='happy' id="{{user[i]}}" onClick="something()"><a href="/happy/{{times[i]}}">HAPPY</a></button>
+
+<button class='love' id="{{user[i]}}" onClick="something()"><a href="/love/{{times[i]}}">LOVE</a></button>
+
+<button class='angry' id="{{user[i]}}" onClick="something()"><a href="/angry/{{times[i]}}">ANGRY</a></button>
+
+
+
+{%endfor%}
+ <br>
+<br>
+
+</center>
+</body>
+</html>
